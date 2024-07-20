@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  justify-content: center;
+  align-items: center;
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -35,4 +38,250 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  min-width: 1140px;
+  align-items: flex-end;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+.content__list {
+  position: relative;
+  min-block-size: 298px;
+  overflow: auto;
+}
+
+ .content__details { 
+  flex-grow: 1;
+  block-size: 535px;
+  display: flex;
+  flex-direction: column;
+}
+
+.result__video-container {
+  position: relative;
+  margin-bottom: 12px;
+  width: 711px;
+  height: 386px;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-block-end: 30px;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  max-inline-size: 201px;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.more-button {
+  inline-size: 100%;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-block-end: 5px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: Oswald;
+  line-height: 70.5px;
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin: 2px;
+}
+
+.content__video-card-title {
+  margin-block-end: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: .9;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__textfield {
+  min-inline-size: 225px;
+  min-block-size: 27px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  inline-size: 19px;
+  block-size: 19px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  min-inline-size: 15px;
+  min-block-size: 15px;
+  background-color: #fff;
+}
+
+.search-form__submit-button {
+  min-inline-size: 194px;
+  min-block-size: 34px;
+  align-self: flex-end;
+}
+
+.search-form__textfield:active {
+  border-color: currentColor;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__card-link:focus{
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+.content__card-link:focus:active {
+  background-color: #545050;
+}
+
+
+.content__card-link:focus:current {
+  background-color: #545050;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
